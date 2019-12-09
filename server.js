@@ -1,15 +1,20 @@
 const http = require("http");
 const request = require("request");
-const { TOKEN } = require("./config");
+
+const API_URL = "https://api.github.com/graphql";
+const TOKEN = process.env.TOKEN || require("./config").TOKEN;
+const port = process.env.PORT || 4000;
 
 function onRequest(req, res) {
   req
     .pipe(
-      request("https://api.github.com/graphql", {
-        headers: { Authorization: `bearer ${TOKEN}` }
+      request(API_URL, {
+        headers: {
+          Authorization: `bearer ${TOKEN}`
+        }
       })
     )
     .pipe(res);
 }
 
-http.createServer(onRequest).listen(4000);
+http.createServer(onRequest).listen(port);
