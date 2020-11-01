@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/lu4ezar/github-search-graphql-server#readme",
   "dependencies": {
-    "request": "^2.88.0"
+    "request": "^2.88.2"
   }
 }
