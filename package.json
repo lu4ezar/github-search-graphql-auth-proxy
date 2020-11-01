@@ -2,7 +2,7 @@
   "name": "github-search-graphql-server",
   "version": "1.0.0",
   "engines": {
-    "node": "10.22.1"
+    "node": "10.23.0"
   },
   "description": "Simple proxy server to provide github authentication for github-search-graphql client.",
   "main": "server.js",
